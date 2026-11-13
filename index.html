@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#bca4d9" />
+  <meta name="description" content="A tiny, cozy corner of the internet made for two people who choose each other, even from afar." />
+  <title>A Little Place for Us ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <div class="music-dock" id="musicDock">
+    <div class="music-row">
+      <span class="music-mark" aria-hidden="true">♫</span>
+      <div class="music-copy">
+        <span class="eyebrow">our soundtrack</span>
+        <strong id="musicState">paused for now</strong>
+      </div>
+      <button class="icon-button" id="musicPlayBtn" type="button" aria-label="Play background music" aria-pressed="false">▶</button>
+      <button class="icon-button" id="musicMuteBtn" type="button" aria-label="Unmute background music" aria-pressed="true">◌</button>
+      <details class="music-settings">
+        <summary aria-label="Open music settings">•••</summary>
+        <div class="music-popover">
+          <label for="musicUrl">YouTube music link</label>
+          <div class="music-input-row">
+            <input id="musicUrl" type="url" autocomplete="off" value="https://www.youtube.com/watch?v=jfKfPfyJRdk" />
+            <button class="tiny-button" id="saveMusicBtn" type="button">Use it</button>
+          </div>
+          <p>Swap the link any time. It is saved on this device.</p>
+        </div>
+      </details>
+    </div>
+    <div class="yt-player" aria-hidden="true">
+      <iframe id="musicFrame" title="Background music" allow="autoplay; encrypted-media" src="about:blank"></iframe>
+    </div>
+  </div>
+
+  <main class="site-shell">
+    <!-- PAGE 1 -->
+    <section class="page page--welcome is-active" data-page="home" aria-labelledby="welcomeTitle">
+      <div class="welcome-inner">
+        <header class="topline">
+          <a class="brand" href="#home" data-nav="home" aria-label="Go to the welcome page"><span class="brand-dot"></span> two hearts, one little corner</a>
+          <span class="page-count">01 <i></i> 03</span>
+        </header>
+
+        <div class="welcome-grid">
+          <div class="welcome-copy">
+            <p class="kicker">made with a little extra love <span>♡</span></p>
+            <h1 id="welcomeTitle">A Little Place<br /><em>for Us</em> <span class="title-heart">♡</span></h1>
+            <p class="welcome-subtitle">A little corner of the internet made just for you and me.</p>
+            <p class="welcome-note">For the days when we miss each other, and the days when everything feels close again.</p>
+            <button class="primary-button" id="openWorld" type="button" data-nav="memories">
+              <span>Open Our Little World</span><span aria-hidden="true">♡</span>
+            </button>
+            <p class="micro-copy"><span class="line-mark"></span> take your time — this place is ours</p>
+          </div>
+
+          <div class="welcome-art" aria-label="A cheerful orange cat beside a love letter" role="img">
+            <div class="art-note note-one">you + me</div>
+            <div class="art-note note-two">always</div>
+            <div class="cat-shadow"></div>
+            <div class="envelope envelope--welcome">
+              <div class="envelope-stamp">♡</div>
+              <div class="envelope-flap"></div>
+              <div class="envelope-paper"><span>a little note<br />for you</span></div>
+              <div class="envelope-front"></div>
+            </div>
+            <svg class="cat" viewBox="0 0 420 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g class="cat-tail">
+                <path d="M326 245c59 27 79-23 48-50-19-17-44-2-36 18 4 10 17 10 23 4" fill="none" stroke="#d66d43" stroke-width="18" stroke-linecap="round"/>
+                <path d="M326 245c59 27 79-23 48-50-19-17-44-2-36 18 4 10 17 10 23 4" fill="none" stroke="#f08c5a" stroke-width="11" stroke-linecap="round"/>
+              </g>
+              <g class="cat-body">
+                <ellipse cx="212" cy="236" rx="110" ry="78" fill="#ed8856"/>
+                <ellipse cx="211" cy="251" rx="75" ry="56" fill="#f49a65"/>
+                <path d="M128 125 136 63c2-16 18-22 30-11l36 34Z" fill="#ed8856"/>
+                <path d="m293 125-8-62c-2-16-18-22-30-11l-36 34Z" fill="#ed8856"/>
+                <path d="m139 101 4-28c1-7 8-9 13-4l18 18Z" fill="#efb09a"/>
+                <path d="m282 101-4-28c-1-7-8-9-13-4l-18 18Z" fill="#efb09a"/>
+                <ellipse cx="211" cy="169" rx="91" ry="79" fill="#f09a63"/>
+                <ellipse cx="178" cy="171" rx="29" ry="27" fill="#f7b185" class="cat-cheek"/>
+                <ellipse cx="245" cy="171" rx="29" ry="27" fill="#f7b185" class="cat-cheek"/>
+                <ellipse cx="181" cy="147" rx="9" ry="13" fill="#4b3a3c" class="cat-eye cat-eye-left"/>
+                <ellipse cx="241" cy="147" rx="9" ry="13" fill="#4b3a3c" class="cat-eye cat-eye-right"/>
+                <circle cx="184" cy="143" r="3" fill="#fff7ec"/>
+                <circle cx="244" cy="143" r="3" fill="#fff7ec"/>
+                <path d="M210 158c-8 0-12 7-3 11l4 2 4-2c9-4 5-11-5-11Z" fill="#b9504b"/>
+                <path d="M210 171c-7 12-18 14-26 7M210 171c7 12 18 14 26 7" fill="none" stroke="#6b4543" stroke-width="4" stroke-linecap="round"/>
+                <path d="M153 162h-45m49 11h-50m118-11h45m-49 11h50" fill="none" stroke="#995948" stroke-width="3" stroke-linecap="round" opacity=".65"/>
+                <path d="M156 228c-2-25 32-29 36-4l1 27c-18 9-33-1-37-23ZM235 224c3-25 37-21 36 4-4 22-19 32-37 23Z" fill="#f4a06b" stroke="#d26c48" stroke-width="4"/>
+                <path d="M182 208c15 13 41 13 56 0" fill="none" stroke="#d26c48" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+                <path d="M181 208c12 8 28 11 40 8 6-1 12-4 17-8" fill="none" stroke="#7ca08d" stroke-width="9" stroke-linecap="round"/>
+                <path d="m211 213 10 13-10 11-10-11Z" fill="#f1ca6d" stroke="#c99049" stroke-width="2"/>
+              </g>
+              <g class="cat-wave-paw">
+                <path d="M298 212c-4-29 1-54 17-58 13-3 18 11 10 21 14-11 25-2 19 10-3 6-11 10-18 11 19-7 26 5 18 15-8 11-29 19-46 15Z" fill="#f49a65" stroke="#d26c48" stroke-width="4"/>
+                <path d="M328 177c6-5 10-9 13-14M332 188c8-3 14-6 19-11" stroke="#c96345" stroke-width="3" stroke-linecap="round"/>
+              </g>
+            </svg>
+            <div class="art-caption"><span>for my favorite human</span><b>☻</b></div>
+          </div>
+        </div>
+
+        <footer class="welcome-footer"><span>est. whenever we found each other</span><span>scroll gently ↓</span></footer>
+      </div>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="page page--memories" data-page="memories" aria-labelledby="memoriesTitle" aria-hidden="true">
+      <div class="memories-inner">
+        <header class="page-header">
+          <div>
+            <p class="kicker">our tiny scrapbook <span>♡</span></p>
+            <h2 id="memoriesTitle">Little Moments,<br /><em>Big Memories</em> <span class="title-heart">♡</span></h2>
+            <p class="section-intro">A few little windows into us. Add the moments you want to keep close.</p>
+          </div>
+          <div class="page-header-side">
+            <span class="page-count">02 <i></i> 03</span>
+            <span class="date-stamp">keepsakes<br />from everywhere</span>
+          </div>
+        </header>
+
+        <div class="memory-grid" id="memoryGrid">
+          <article class="memory-card card-a" data-card="0">
+            <span class="tape tape--top-left"></span>
+            <div class="photo-frame">
+              <button class="photo-trigger" type="button" aria-label="Add or view memory photo 1">
+                <span class="photo-placeholder"><span class="camera-icon">⌁</span><strong>Add a photo</strong><small>click to choose one</small></span>
+                <img class="memory-image" alt="" />
+              </button>
+              <input class="photo-input" type="file" accept="image/*" aria-label="Upload memory photo 1" />
+            </div>
+            <div class="caption-line"><span class="caption-number">01</span><p class="editable-caption" contenteditable="true" data-placeholder="Write a caption...">A moment I'll always remember.</p></div>
+          </article>
+
+          <article class="memory-card card-b" data-card="1">
+            <span class="tape tape--top-right"></span>
+            <div class="photo-frame">
+              <button class="photo-trigger" type="button" aria-label="Add or view memory photo 2">
+                <span class="photo-placeholder"><span class="camera-icon">⌁</span><strong>Add a photo</strong><small>click to choose one</small></span>
+                <img class="memory-image" alt="" />
+              </button>
+              <input class="photo-input" type="file" accept="image/*" aria-label="Upload memory photo 2" />
+            </div>
+            <div class="caption-line"><span class="caption-number">02</span><p class="editable-caption" contenteditable="true" data-placeholder="Write a caption...">Even from afar, you make me smile.</p></div>
+          </article>
+
+          <article class="memory-card card-c" data-card="2">
+            <span class="tape tape--side"></span>
+            <div class="photo-frame">
+              <button class="photo-trigger" type="button" aria-label="Add or view memory photo 3">
+                <span class="photo-placeholder"><span class="camera-icon">⌁</span><strong>Add a photo</strong><small>click to choose one</small></span>
+                <img class="memory-image" alt="" />
+              </button>
+              <input class="photo-input" type="file" accept="image/*" aria-label="Upload memory photo 3" />
+            </div>
+            <div class="caption-line"><span class="caption-number">03</span><p class="editable-caption" contenteditable="true" data-placeholder="Write a caption...">My favorite person, always.</p></div>
+          </article>
+
+          <article class="memory-card card-d" data-card="3">
+            <span class="tape tape--bottom-right"></span>
+            <div class="photo-frame">
+              <button class="photo-trigger" type="button" aria-label="Add or view memory photo 4">
+                <span class="photo-placeholder"><span class="camera-icon">⌁</span><strong>Add a photo</strong><small>click to choose one</small></span>
+                <img class="memory-image" alt="" />
+              </button>
+              <input class="photo-input" type="file" accept="image/*" aria-label="Upload memory photo 4" />
+            </div>
+            <div class="caption-line"><span class="caption-number">04</span><p class="editable-caption" contenteditable="true" data-placeholder="Write a caption...">Little memories that mean everything.</p></div>
+          </article>
+        </div>
+
+        <div class="memory-footer">
+          <span class="edit-hint"><span class="pencil">✎</span> captions are yours to change — they save as you type</span>
+          <nav class="page-nav" aria-label="Memory page navigation">
+            <button class="text-button" type="button" data-nav="home"><span>←</span> Back</button>
+            <button class="primary-button compact" type="button" data-nav="letter"><span>Continue to our letter</span><span aria-hidden="true">→</span></button>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3 -->
+    <section class="page page--letter" data-page="letter" aria-labelledby="letterTitle" aria-hidden="true">
+      <div class="letter-inner">
+        <header class="page-header letter-header">
+          <div>
+            <p class="kicker">a note from my heart <span>♡</span></p>
+            <h2 id="letterTitle">Something I Want<br /><em>You to Know...</em></h2>
+          </div>
+          <div class="page-header-side">
+            <span class="page-count">03 <i></i> 03</span>
+            <span class="date-stamp">sealed with<br />all my love</span>
+          </div>
+        </header>
+
+        <div class="letter-layout">
+          <div class="letter-paper-wrap">
+            <span class="paper-tape"></span>
+            <article class="letter-paper">
+              <div class="letter-meta"><span>dear you,</span><span class="letter-date">whenever you read this</span></div>
+              <div class="letter-body" id="letterBody" contenteditable="true" role="textbox" aria-multiline="true" spellcheck="true" aria-label="Editable love letter">
+                <p>I know the miles can feel big sometimes, but I hope you know how much space you have in my everyday life.</p>
+                <p>You are in the little things: the song I send you, the good news I cannot wait to share, the quiet moments that feel softer because I know you are there.</p>
+                <p>Thank you for choosing us, for meeting me in the middle, and for making far away feel a little more like home.</p>
+                <p>With all my heart,<br />your favorite person ♡</p>
+              </div>
+              <div class="letter-footer"><span class="editable-signoff" contenteditable="true">P.S. I love you across every timezone.</span><span>♡</span></div>
+            </article>
+          </div>
+
+          <aside class="letter-side-note">
+            <div class="folded-envelope" aria-hidden="true">
+              <div class="folded-envelope-back"></div>
+              <div class="folded-envelope-flap"></div>
+              <div class="folded-envelope-front"><span>to my<br />favorite<br />person</span></div>
+            </div>
+            <p class="side-note-copy"><span class="hand-arrow">↘</span> This part is yours.<br />Edit the letter until it sounds exactly like you.</p>
+          </aside>
+        </div>
+
+        <div class="last-thing" id="lastThing">
+          <button class="reveal-button" type="button" id="revealButton" aria-expanded="false"><span class="reveal-scribble">♡</span><span>One Last Thing...</span><span class="reveal-plus">+</span></button>
+          <div class="reveal-message" id="revealMessage" hidden>
+            <p>Distance may keep us apart, but you'll always have a home in my heart. I would still choose you, in every lifetime. ♡</p>
+            <strong>Thank you for being my favorite person.</strong>
+          </div>
+        </div>
+
+        <footer class="letter-footer-nav">
+          <button class="text-button" type="button" data-nav="memories"><span>←</span> Back to memories</button>
+          <button class="primary-button compact" type="button" data-nav="home"><span>Read Our Story Again</span><span aria-hidden="true">♡</span></button>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded memory photo" hidden>
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close enlarged photo">×</button>
+    <img id="lightboxImage" alt="" />
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
